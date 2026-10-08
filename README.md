@@ -10,6 +10,8 @@
 - A clearly labeled browser-local demonstration. Demo grants and simulated verdicts never represent validator decisions or real funds.
 - Deployment script and contract/domain tests.
 
+**Live app:** [Open PACTPROOF](https://smokexbadlines-dot.github.io/pactproof-genlayer/). It opens in GenLayer mode and reads finalized Studionet state without a wallet.
+
 **Live Studionet deployment:** `0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918` ([explorer](https://explorer-studio.genlayer.com/address/0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918)). A clean, synthetic 1 GEN grant completed full-consensus evaluation and payout; see [`LIVE_TEST_REPORT.md`](LIVE_TEST_REPORT.md). Use faucet tokens only.
 
 ## Run locally
