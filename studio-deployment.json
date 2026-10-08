@@ -1,0 +1,8 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "address": "0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918",
+  "deploymentTransaction": "0xc0c7e22fd72b63535f0cc1d11b6a3686e210c6a1080ed3a66b95781f6932279a",
+  "status": "FINALIZED",
+  "explorer": "https://explorer-studio.genlayer.com/address/0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918"
+}

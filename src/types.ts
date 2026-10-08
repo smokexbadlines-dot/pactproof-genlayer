@@ -1,0 +1,10 @@
+export type EvidenceType = 'SOURCE_CODE' | 'DOCUMENTATION' | 'TEST_REPORT';
+export type Verdict = 'MET' | 'NOT_MET' | 'INCONCLUSIVE';
+export type Outcome = Verdict | 'PARTIALLY_MET' | '';
+export type Criterion = {id:string;text:string;weight_bps:number;evidence_type:EvidenceType};
+export type Evidence = {id:string;url:string;sha256:string;type:EvidenceType;criterion_ids:string[]};
+export type Grant = {id:string;title:string;description:string;builder:string;creator:string;deadline:number;criteria:Criterion[];reward_wei:string;terms_hash:string;state:'OPEN'|'ACTIVE'|'SUBMITTED'|'REVISION'|'CLOSED';created_at:number;attempt:number;evidence:Evidence[];submission_hash:string;outcome:Outcome;payout_wei:string;refund_wei:string;latest_record:string};
+export type Terms = Pick<Grant,'title'|'description'|'builder'|'deadline'|'criteria'>;
+export type Row = {id:string;status:Verdict;reason:string;citations:{evidence_id:string;quote:string}[]};
+export type Archive = {id:string;grant_id:string;attempt:number;terms_hash:string;submission_hash:string;evidence_window_hash:string;evaluated_at:number;outcome:Outcome;earned_bps:number;rows:Row[];windows:(Evidence & {retrieval:string;observed_sha256:string;text:string})[]};
+export type Pending = {hash:`0x${string}`;method:string;submittedAt:number;network:string;contract:string;account:string};

@@ -1,0 +1,9 @@
+# Submission verification — 8 October 2026
+
+PACTPROOF is deployed on GenLayer Studionet (chain ID 61999) at [`0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918`](https://explorer-studio.genlayer.com/address/0xC6AE9b4AA319dfDd1486A846DfEb5fc4012dD918). Deployment transaction `0xc0c7e22fd72b63535f0cc1d11b6a3686e210c6a1080ed3a66b95781f6932279a` finalized, and the SDK source lookup returned `class PactProof(`.
+
+Studio Normal (Full Consensus) finalized grant funding, builder acceptance, typed public evidence submission, validator evaluation and builder withdrawal. The clean deployment has one grant, one `MET` record (`1:1`), and no historical funding anomaly. The record's evidence-window hash matches independent SHA-256 recomputation. Native escrow was exactly 1 GEN after funding and zero after the 1 GEN payout; builder faucet balance increased from 11 to 12 GEN. See [`LIVE_TEST_REPORT.md`](LIVE_TEST_REPORT.md) for every transaction ID and the exact criterion.
+
+Local verification: 14 frontend tests passed; TypeScript and Vite production build passed. Nine Intelligent Contract direct-runtime tests passed using official GenVM v0.2.12 SDK source and mocked web/model responses. The deployed source pins Studio GenVM v0.2.16, so the direct tests complement rather than replace the live consensus test. The build warns about a 798 kB application chunk.
+
+The app connected a MetaMask public address in Chrome and displayed finalized contract reads. App-originated signed MetaMask writes remain unverified because the extension signing popup was inaccessible to browser automation. The Studio accounts completed the write-path integration. Studio test receipts reported zero effective gas price; fee-charging network costs, worst-case evidence loads, failed withdrawal messages and appeal recomputation remain outside this MVP verification. See [`SECURITY_REVIEW.md`](SECURITY_REVIEW.md).
